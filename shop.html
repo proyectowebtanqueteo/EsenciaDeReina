@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Esencia de Reina - Productos</title>
+  <meta charset="utf-8" />
+  <meta name="google" content="notranslate">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="apple-touch-icon" href="assets/img/apple-icon.png" />
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/templatemo.css" />
+  <link rel="stylesheet" href="assets/css/custom.css" />
+  <style>
+    .ms-custom {
+      margin-left: 20rem !important;
+    }
+  </style>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap" />
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="w-100 pt-1 mb-5 text-right">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="" method="get" class="modal-content modal-body border-0 p-0">
+        <div class="input-group mb-2">
+          <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ..." />
+          <button type="submit" class="input-group-text bg-success text-light">
+            <i class="fa fa-fw fa-search text-white"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="shop-page-container" class="container py-5">
+    <div class="row">
+      <div class="col-lg-3">
+        <h1 class="h2 pb-4 shop-categories-title" data-lang-en="Categories" data-lang-es="Categorías">Categories</h1>
+        <ul class="list-unstyled templatemo-accordion">
+          <li class="pb-3">
+            <a class="h3 text-decoration-none category-filter active" href="#" data-filter="all"
+              data-lang-en="All Products" data-lang-es="Todos los productos">Todos los productos</a>
+          </li>
+          <li class="pb-3">
+            <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#"
+              data-bs-toggle="collapse" data-bs-target="#collapseThree">
+              <span data-lang-en="Categories" data-lang-es="Categorías">Categories</span>
+              <i class="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
+            </a>
+            <ul id="collapseThree" class="collapse list-unstyled pl-3">
+              <li><a class="text-decoration-none category-filter" href="#" data-filter="earrings"
+                  data-lang-en="Earrings" data-lang-es="Zarcillos">Earrings</a></li>
+              <li><a class="text-decoration-none category-filter" href="#" data-filter="necklaces"
+                  data-lang-en="Necklaces" data-lang-es="Collares">Necklaces</a></li>
+              <li><a class="text-decoration-none category-filter" href="#" data-filter="rings" data-lang-en="Rings"
+                  data-lang-es="Anillos">Rings</a></li>
+              <li><a class="text-decoration-none category-filter" href="#" data-filter="bracelets"
+                  data-lang-en="Bracelets" data-lang-es="Pulseras">Bracelets</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-9">
+        <div class="row">
+          <div class="col-12">
+            <form id="shop-search-form" class="mb-4">
+              <div class="input-group">
+                <input type="search" class="form-control" placeholder="Buscar productos por nombre..."
+                  id="shop-search-input" data-lang-placeholder-en="Search products by name..."
+                  data-lang-placeholder-es="Buscar productos por nombre..." />
+                <button class="btn" type="submit">
+                  <i class="fa fa-fw fa-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 pb-4">
+            <ul class="nav nav-pills justify-content-end shop-sort-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" data-sort="featured" data-lang-en="Featured"
+                  data-lang-es="Destacados">Featured</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-sort="a-z">A to Z</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-sort="price">Price</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row product-container">
+        </div>
+        <div class="row">
+          <ul class="pagination pagination-lg justify-content-end" id="pagination-container">
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="assets/js/jquery-1.11.0.min.js"></script>
+  <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/templatemo.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+/* --- DEFINICIÓN DE FUENTES --- */
+@font-face {
+    font-family: 'Gotham';
+    src: url('../webfonts/TIPOGRAFIAS/GOTHAM/Gotham-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham';
+    src: url('../webfonts/TIPOGRAFIAS/GOTHAM/Gotham-Book.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham';
+    src: url('../webfonts/TIPOGRAFIAS/GOTHAM/Gotham-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham';
+    src: url('../webfonts/TIPOGRAFIAS/GOTHAM/Gotham-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham';
+    src: url('../webfonts/TIPOGRAFIAS/GOTHAM/Gotham-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Adorn Story Serif';
+    src: url('../webfonts/TIPOGRAFIAS/ADORN STORY SERIF/AdornStorySerif.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Adorn Story Script';
+    src: url('../webfonts/TIPOGRAFIAS/ADORN STORY SCRIPT/AdornStoryScript.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

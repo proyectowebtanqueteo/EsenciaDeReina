@@ -1,0 +1,82 @@
+<nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
+    <div class="container text-light d-flex justify-content-center">
+        <p class="mb-0" data-lang-en="Welcome to our store!" data-lang-es="¡Bienvenid@ a nuestra tienda!">Welcome to our
+            store!</p>
+    </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-light shadow">
+    <div class="container d-flex justify-content-between align-items-center">
+
+        <a class="navbar-brand logo h1 align-self-center" href="index.html">
+            <img src="./assets/img/logo.png" alt="Esencia de Reina Logo"
+                style="width: 150px; margin-top: 15px; margin-bottom: 5px;">
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse flex-fill" id="templatemo_main_nav">
+            <div class="flex-fill">
+                <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="navbar align-self-center d-flex">
+            
+
+            <div class="nav-item dropdown">
+                <a class="nav-icon position-relative text-decoration-none me-3" href="#" id="cart-icon" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                    <i class="fa fa-fw fa-cart-arrow-down text-dark"></i>
+                    <span id="cart-badge"
+                        class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">0</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" id="shopping-cart-dropdown" aria-labelledby="cart-icon">
+                    <div class="p-3">
+                        <h5 class="mb-3" data-lang-en="Shopping Cart" data-lang-es="Carrito de Compras">Shopping Cart
+                        </h5>
+                        <div id="cart-items-container">
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between">
+                            <h5 data-lang-en="Total:" data-lang-es="Total:">Total:</h5>
+                            <h5 id="cart-total">$0.00</h5>
+                        </div>
+                        <div class="d-grid gap-2 mt-3">
+                            <button class="btn btn-success" type="button" id="checkout-btn" data-lang-en="Checkout"
+                                data-lang-es="Pagar">Checkout</button>
+                            <button class="btn btn-danger" id="clear-cart-btn" type="button" data-lang-en="Clear Cart"
+                                data-lang-es="Vaciar Carrito">Clear Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <a class="nav-icon position-relative text-decoration-none" href="#" id="languageDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-fw fa-globe text-dark"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                    <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+                    <li><a class="dropdown-item" href="#" data-lang="es">Español</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</nav>
