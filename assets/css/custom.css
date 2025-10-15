@@ -531,6 +531,18 @@ body.menu-open::before {
         max-height: 32vh;
         padding: 0 0.2rem;
     }
+
+    .thumb-img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 0.5rem;
+        border: 2px solid transparent;
+        transition: border 0.2s, box-shadow 0.2s;
+        margin: 0 auto;
+        background: #fff;
+    }
 }
 
 @media (max-width: 420px) {
@@ -1053,5 +1065,82 @@ h5,
     #cart-items-container {
         max-height: 32vh;
         padding: 0 0.2rem;
+    }
+
+    .thumb-img {
+        width: 85px;
+        height: 85px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 0.5rem;
+        margin: 0 auto;
+        background: #fff;
+    }
+}
+
+/* Imagen principal del producto */
+#product-viewer {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1/1;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+#product-detail {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+    box-shadow: none;
+    background: none;
+    display: block;
+}
+
+/* Miniaturas */
+.product-links-wap .col-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thumb-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.5rem;
+    border: 2px solid transparent;
+    transition: border 0.2s, box-shadow 0.2s;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.thumb-img:hover,
+.thumb-link.active .thumb-img {
+    border: 2px solid #004750;
+    box-shadow: 0 0 8px #00475044;
+}
+
+@media (max-width: 575.98px) {
+    .thumb-img {
+        width: 85px;
+        height: 85px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 0.5rem;
+        margin: 0 auto;
+        background: #fff;
     }
 }

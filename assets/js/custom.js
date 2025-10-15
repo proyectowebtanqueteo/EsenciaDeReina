@@ -1,4 +1,360 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // ==================== CONFIGURACIÓN DE PRODUCTOS ====================
+  const allProducts = [
+    {
+      id: 1,
+      name: 'Anillos de plata',
+      price: 350,
+      category: 'rings',
+      img: './assets/img/productos/anillos/1.jpg',
+      description: 'Elegante anillo de plata 925, perfecto para cualquier ocasión. Diseño clásico y atemporal que resalta la belleza de tus manos.',
+      color: 'Plata',
+      specifications: [
+        'Material: Plata 925',
+        'Tamaño ajustable',
+        'Hipoalergénico',
+        'Hecho a mano',
+        'Incluye estuche de regalo'
+      ],
+      images: [
+        'assets/img/productos/anillos/1.jpg',
+        'assets/img/productos/anillos/2.jpg',
+        'assets/img/productos/anillos/3.jpg'
+      ]
+    },
+    {
+      id: 2,
+      name: 'Anillos de oro',
+      price: 480,
+      category: 'rings',
+      img: './assets/img/productos/anillos/5.jpg',
+      description: 'Exclusivo anillo de oro 18k, ideal para ocasiones especiales. Brillo y elegancia incomparables.',
+      color: 'Oro',
+      specifications: [
+        'Material: Oro 18k',
+        'Tamaño ajustable',
+        'Hipoalergénico',
+        'Hecho a mano',
+        'Incluye estuche de lujo'
+      ],
+      images: [
+        'assets/img/productos/anillos/5.jpg',
+        'assets/img/productos/anillos/4.jpg',
+        'assets/img/productos/anillos/6.jpg'
+      ]
+    },
+    {
+      id: 3,
+      name: 'Cruces de oro',
+      price: 520,
+      category: 'necklaces',
+      img: './assets/img/productos/collares/11.jpg',
+      description: 'Hermosa cruz de oro 18k, símbolo de fe y elegancia. Perfecta para regalar o lucir en ocasiones especiales.',
+      color: 'Oro',
+      specifications: [
+        'Material: Oro 18k',
+        'Cadena incluida',
+        'Hipoalergénico',
+        'Hecho a mano',
+        'Incluye estuche de lujo'
+      ],
+      images: [
+        'assets/img/productos/collares/11.jpg',
+        'assets/img/productos/collares/12.jpg',
+        'assets/img/productos/collares/13.jpg'
+      ]
+    },
+    {
+      id: 4,
+      name: 'Corazones de oro',
+      price: 620,
+      category: 'necklaces',
+      img: './assets/img/productos/collares/9.jpg',
+      description: 'Collar de corazones de oro 18k, diseño romántico y elegante. Ideal para regalar a alguien especial o lucir en ocasiones únicas.',
+      color: 'Oro',
+      specifications: [
+        'Material: Oro 18k',
+        'Cadena de 45cm incluida',
+        'Hipoalergénico',
+        'Hecho a mano',
+        'Incluye estuche de lujo'
+      ],
+      images: [
+        'assets/img/productos/collares/2.jpg',
+        'assets/img/productos/collares/9.jpg',
+        'assets/img/productos/collares/14.jpg'
+      ]
+    },
+    {
+      id: 5,
+      name: 'Virgenes de oro',
+      price: 850,
+      category: 'necklaces',
+      img: './assets/img/productos/collares/1.jpg',
+      description: 'Collar Virgen de oro 18k, símbolo de protección y fe. Pieza única y elegante para ocasiones especiales.',
+      color: 'Oro',
+      specifications: [
+        'Material: Oro 18k',
+        'Cadena de 45cm incluida',
+        'Hipoalergénico',
+        'Hecho a mano',
+        'Incluye estuche de lujo'
+      ],
+      images: [
+        'assets/img/productos/collares/1.jpg',
+        'assets/img/productos/collares/5.jpg',
+        'assets/img/productos/collares/8.jpg'
+      ]
+    },
+    {
+      id: 6,
+      name: 'Collares estilo conchas de oro',
+      price: 780,
+      category: 'necklaces',
+      img: 'assets/img/productos/collares/4.jpg',
+      description: 'Collar de oro 18k con diseño de conchas, elegante y veraniego. Perfecto para destacar en cualquier ocasión.',
+      color: 'Oro',
+      specifications: [
+        'Material: Oro 18k',
+        'Diseño de conchas',
+        'Cadena incluida',
+        'Hipoalergénico',
+        'Hecho a mano'
+      ],
+      images: [
+        'assets/img/productos/collares/4.jpg',
+        'assets/img/productos/collares/3.jpg'
+      ]
+    },
+    {
+      id: 7,
+      name: 'Collares estilo van cleef',
+      price: 950,
+      category: 'necklaces',
+      img: 'assets/img/productos/collares/6.jpg',
+      description: 'Collar de oro 18k estilo Van Cleef, elegante y sofisticado. Ideal para ocasiones especiales.',
+      color: 'Oro',
+      specifications: [
+        'Material: Oro 18k',
+        'Diseño inspirado en Van Cleef',
+        'Ajustable',
+        'Hipoalergénico',
+        'Hecho a mano'
+      ],
+      images: [
+        'assets/img/productos/collares/6.jpg',
+        'assets/img/productos/collares/7.jpg'
+      ]
+    },
+    {
+      id: 8,
+      name: 'Dijes de oro',
+      price: 420,
+      category: 'pendants',
+      img: './assets/img/productos/dijes/2.jpg',
+      description: 'Dije de oro 18k, elegante y versátil para cualquier ocasión. Un toque de distinción para tu cadena favorita.',
+      color: 'Oro',
+      specifications: [
+        'Material: Oro 18k',
+        'Diseño clásico',
+        'Hipoalergénico',
+        'Hecho a mano'
+      ],
+      images: [
+        'assets/img/productos/dijes/2.jpg',
+        'assets/img/productos/dijes/3.jpg',
+        'assets/img/productos/dijes/8.jpg'
+      ]
+    },
+    {
+      id: 9,
+      name: 'Dijes variados',
+      price: 350,
+      category: 'pendants',
+      img: './assets/img/productos/dijes/1.jpg',
+      description: 'Colección de dijes variados en oro 18k, ideales para personalizar tu estilo y combinar con diferentes cadenas.',
+      color: 'Oro',
+      specifications: [
+        'Material: Oro 18k',
+        'Varios diseños',
+        'Hipoalergénico',
+        'Hecho a mano'
+      ],
+      images: [
+        'assets/img/productos/dijes/1.jpg',
+        'assets/img/productos/dijes/5.jpg'
+      ]
+    },
+    {
+      id: 10,
+      name: 'Dijes religiosos de oro',
+      price: 480,
+      category: 'pendants',
+      img: './assets/img/productos/dijes/4.jpg',
+      description: 'Dijes religiosos en oro 18k, símbolos de fe y protección. Perfectos para expresar tu espiritualidad con elegancia.',
+      color: 'Oro',
+      specifications: [
+        'Material: Oro 18k',
+        'Motivos religiosos',
+        'Hipoalergénico',
+        'Hecho a mano'
+      ],
+      images: [
+        'assets/img/productos/dijes/4.jpg',
+        'assets/img/productos/dijes/6.jpg',
+        'assets/img/productos/dijes/7.jpg'
+      ]
+    },
+    {
+      id: 11,
+      name: 'Pulsera de oro clásica',
+      price: 690,
+      category: 'bracelets',
+      img: './assets/img/productos/pulseras/1.jpg',
+      description: 'Pulsera de oro 18k, diseño clásico y elegante para cualquier ocasión. Un básico imprescindible en tu colección.',
+      color: 'Oro',
+      specifications: [
+        'Material: Oro 18k',
+        'Diseño clásico',
+        'Ajustable',
+        'Hipoalergénico',
+        'Hecho a mano'
+      ],
+      images: [
+        'assets/img/productos/pulseras/1.jpg',
+        'assets/img/productos/pulseras/3.jpg',
+        'assets/img/productos/pulseras/5.jpg'
+      ]
+    },
+    {
+      id: 12,
+      name: 'Pulsera tejida',
+      price: 520,
+      category: 'bracelets',
+      img: './assets/img/productos/pulseras/2.jpg',
+      description: 'Pulsera tejida, mezcla de tradición y modernidad. Ideal para quienes buscan un toque artesanal y sofisticado.',
+      color: 'Oro',
+      specifications: [
+        'Tejido artesanal',
+        'Ajustable',
+        'Hipoalergénico',
+        'Hecho a mano'
+      ],
+      images: [
+        'assets/img/productos/pulseras/2.jpg'
+      ]
+    },
+    {
+      id: 13,
+      name: 'Pulsera de perlas clásica',
+      price: 430,
+      category: 'bracelets',
+      img: './assets/img/productos/pulseras/7.jpg',
+      description: 'Pulsera clásica de perlas naturales, símbolo de elegancia y sofisticación atemporal.',
+      color: 'Perla',
+      specifications: [
+        'Material: Perlas naturales',
+        'Cierre de oro 18k',
+        'Hecho a mano',
+        'Ajustable'
+      ],
+      images: [
+        'assets/img/productos/pulseras/7.jpg',
+        'assets/img/productos/pulseras/4.jpg'
+      ]
+    },
+    {
+      id: 14,
+      name: 'Pulsera de perlas modernas',
+      price: 470,
+      category: 'bracelets',
+      img: './assets/img/productos/pulseras/6.jpg',
+      description: 'Pulsera de perlas con diseño moderno y detalles en oro, perfecta para un look contemporáneo.',
+      color: 'Perla',
+      specifications: [
+        'Material: Perlas naturales y oro 18k',
+        'Diseño moderno',
+        'Hecho a mano',
+        'Ajustable'
+      ],
+      images: [
+        'assets/img/productos/pulseras/6.jpg'
+      ]
+    },
+    {
+      id: 15,
+      name: 'Zarcillos de oro estilo tropical',
+      price: 520,
+      category: 'earrings',
+      img: './assets/img/productos/zarcillos/6.jpg',
+      description: 'Zarcillos de oro 18k con diseños tropicales, ideales para un look fresco y veraniego.',
+      color: 'Oro',
+      specifications: [
+        'Material: Oro 18k',
+        'Diseño tropical',
+        'Hipoalergénico',
+        'Hecho a mano'
+      ],
+      images: [
+        'assets/img/productos/zarcillos/3.jpg',
+        'assets/img/productos/zarcillos/6.jpg',
+        'assets/img/productos/zarcillos/5.jpg'
+      ]
+    },
+    {
+      id: 16,
+      name: 'Zarcillos de oro estilo herval',
+      price: 490,
+      category: 'earrings',
+      img: './assets/img/productos/zarcillos/1.jpg',
+      description: 'Zarcillos de oro 18k inspirados en formas herbales, elegantes y delicados para cualquier ocasión.',
+      color: 'Oro',
+      specifications: [
+        'Material: Oro 18k',
+        'Diseño herbal',
+        'Hipoalergénico',
+        'Hecho a mano'
+      ],
+      images: [
+        'assets/img/productos/zarcillos/1.jpg',
+        'assets/img/productos/zarcillos/2.jpg',
+        'assets/img/productos/zarcillos/7.jpg'
+      ]
+    },
+    {
+      id: 17,
+      name: 'Zarcillos de plata clásicos',
+      price: 320,
+      category: 'earrings',
+      img: './assets/img/productos/zarcillos/4.jpg',
+      description: 'Zarcillos clásicos de plata 925, perfectos para un estilo elegante y atemporal.',
+      color: 'Plata',
+      specifications: [
+        'Material: Plata 925',
+        'Diseño clásico',
+        'Hipoalergénico',
+        'Hecho a mano'
+      ],
+      images: [
+        'assets/img/productos/zarcillos/4.jpg'
+      ]
+    },
+
+  ];
+
+  // ==================== FUNCIÓN PARA GUARDAR PRODUCTO ====================
+  function saveProductToLocalStorage(productId) {
+    const product = allProducts.find(p => p.id == productId);
+    if (product) {
+      console.log('Guardando producto:', product);
+      localStorage.setItem('selectedProduct', JSON.stringify(product));
+      return true;
+    }
+    console.error('Producto no encontrado:', productId);
+    return false;
+  }
+
+  // ==================== CARGAR COMPONENTES ====================
   function loadComponent(componentPath, placeholderId) {
     return fetch(componentPath)
       .then((response) => response.text())
@@ -79,13 +435,13 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       setupLanguageSwitcher();
-
       updateCart();
     }
   );
 
   $("#footer-placeholder").load("./assets/components/footer.html");
 
+  // ==================== VER MÁS BUTTON ====================
   const products = $("#featured-products .col-12.col-md-4.mb-4");
   const verMasBtn = $("#ver-mas-btn");
   const initialShow = 3;
@@ -101,7 +457,6 @@ document.addEventListener("DOMContentLoaded", function () {
   verMasBtn.on("click", function () {
     const currentLang = localStorage.getItem('preferredLanguage') || 'en';
     const showAllText = currentLang === 'es' ? 'Mostrar todos' : 'Show all';
-    const viewMoreText = currentLang === 'es' ? 'Ver más' : 'View more';
 
     if ($(this).text().trim() === showAllText) {
       window.location.href = "shop.html";
@@ -109,9 +464,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const nextLimit = currentlyVisible + step;
-
     products.slice(currentlyVisible, nextLimit).slideDown();
-
     currentlyVisible = nextLimit;
 
     if (currentlyVisible >= products.length) {
@@ -121,12 +474,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // ==================== FAVICON ====================
   const faviconLink = document.createElement("link");
   faviconLink.rel = "shortcut icon";
   faviconLink.type = "image/x-icon";
   faviconLink.href = "assets/img/logo2.png";
   document.head.appendChild(faviconLink);
 
+  // ==================== FLIP CARDS ====================
   const valueCards = document.querySelectorAll('.flip-card');
   valueCards.forEach(card => {
     card.addEventListener('click', () => {
@@ -134,6 +489,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // ==================== CARRITO DE COMPRAS ====================
   let cart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
 
   function updateCart() {
@@ -198,37 +554,90 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCart();
   }
 
+  // ==================== EVENT DELEGATION MEJORADO ====================
   document.body.addEventListener('click', function (e) {
-    const addToCartBtn = e.target.closest('.add-to-cart-btn');
-    if (addToCartBtn) {
-      const card = addToCartBtn.closest('.product-wap');
-      const product = {
-        id: card.dataset.id,
-        name: card.dataset.name,
-        price: parseFloat(card.dataset.price),
-        img: card.dataset.img,
-      };
-      addToCart(product);
+    // Primero, verificar si es un clic en el ícono del ojo
+    if (e.target.classList.contains('fa-eye') || e.target.closest('.fa-eye')) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const eyeIcon = e.target.classList.contains('fa-eye') ? e.target : e.target.closest('.fa-eye');
+      const card = eyeIcon.closest('.product-wap');
+
+      if (card && card.dataset.id) {
+        const productId = card.dataset.id;
+        console.log('Click en ojo, ID:', productId);
+        if (saveProductToLocalStorage(productId)) {
+          setTimeout(() => {
+            window.location.href = 'shop-single.html';
+          }, 100);
+        }
+      }
+      return;
     }
 
-    const removeFromCartBtn = e.target.closest('.remove-from-cart');
-    if (removeFromCartBtn) {
+    // Verificar si es un clic en el botón de añadir al carrito
+    if (e.target.classList.contains('fa-cart-plus') || e.target.closest('.add-to-cart-btn')) {
+      e.preventDefault();
       e.stopPropagation();
-      const cartItem = removeFromCartBtn.closest('.cart-item');
+
+      const addBtn = e.target.closest('.add-to-cart-btn');
+      if (addBtn) {
+        const card = addBtn.closest('.product-wap');
+        if (card) {
+          const product = {
+            id: card.dataset.id,
+            name: card.dataset.name,
+            price: parseFloat(card.dataset.price),
+            img: card.dataset.img,
+          };
+          addToCart(product);
+        }
+      }
+      return;
+    }
+
+    // Verificar si es un clic en el nombre del producto
+    if (e.target.closest('.h3.text-decoration-none')) {
+      const nameLink = e.target.closest('.h3.text-decoration-none');
+      e.preventDefault();
+      e.stopPropagation();
+
+      const card = nameLink.closest('.product-wap');
+      if (card && card.dataset.id) {
+        const productId = card.dataset.id;
+        console.log('Click en nombre, ID:', productId);
+        if (saveProductToLocalStorage(productId)) {
+          setTimeout(() => {
+            window.location.href = 'shop-single.html';
+          }, 100);
+        }
+      }
+      return;
+    }
+
+    // ELIMINAR DEL CARRITO
+    if (e.target.closest('.remove-from-cart')) {
+      e.preventDefault();
+      e.stopPropagation();
+      const cartItem = e.target.closest('.cart-item');
       const productId = cartItem.dataset.id;
       const itemIndex = cart.findIndex(item => item.id === productId);
       if (itemIndex > -1) {
         cart.splice(itemIndex, 1);
       }
       updateCart();
+      return;
     }
 
-    const quantityChangeBtn = e.target.closest('.quantity-change');
-    if (quantityChangeBtn) {
+    // CAMBIAR CANTIDAD
+    if (e.target.closest('.quantity-change')) {
+      e.preventDefault();
       e.stopPropagation();
-      const cartItem = quantityChangeBtn.closest('.cart-item');
+      const quantityBtn = e.target.closest('.quantity-change');
+      const cartItem = quantityBtn.closest('.cart-item');
       const productId = cartItem.dataset.id;
-      const change = parseInt(quantityChangeBtn.dataset.change);
+      const change = parseInt(quantityBtn.dataset.change);
       const itemInCart = cart.find(item => item.id === productId);
       if (itemInCart) {
         itemInCart.quantity += change;
@@ -237,16 +646,20 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
       updateCart();
+      return;
     }
 
+    // LIMPIAR CARRITO
     if (e.target.id === 'clear-cart-btn') {
+      e.preventDefault();
       cart = [];
       updateCart();
+      return;
     }
 
-    // Evento para el botón de Checkout (Pagar)
-    const checkoutBtn = e.target.closest('#checkout-btn');
-    if (checkoutBtn) {
+    // CHECKOUT (WHATSAPP)
+    if (e.target.closest('#checkout-btn')) {
+      e.preventDefault();
       const now = new Date();
       const hour = now.getHours();
       let saludo = 'Buenas tardes';
@@ -263,82 +676,18 @@ document.addEventListener("DOMContentLoaded", function () {
       cart.forEach(item => {
         mensaje += `- ${item.name} (Cantidad: ${item.quantity})\n`;
       });
-      // Agrega el total al mensaje
       const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
       mensaje += `\nTotal: $${total.toFixed(2)}`;
 
       const numero = '19452179299';
       const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
       window.open(url, '_blank');
+      return;
     }
   });
 
-
-
+  // ==================== PÁGINA DE TIENDA (shop.html) ====================
   if (window.location.pathname.endsWith('shop.html')) {
-    const allProducts = [
-      { id: 1, name: 'Golden Hoop Earrings', price: 150.00, category: 'earrings', img: './assets/img/zarcillo.jpg' },
-      { id: 2, name: 'Silver Drop Earrings', price: 120.00, category: 'earrings', img: './assets/img/zarcillo.jpg' },
-      { id: 3, name: 'Diamond Ring', price: 980.00, category: 'rings', img: './assets/img/anillo.png' },
-      { id: 4, name: 'Sapphire Ring', price: 750.00, category: 'rings', img: './assets/img/anillo.png' },
-      { id: 5, name: 'Pearl Necklace', price: 420.00, category: 'necklaces', img: './assets/img/collar.png' },
-      { id: 6, name: 'Gold Bracelet', price: 360.00, category: 'bracelets', img: './assets/img/collar.png' },
-      { id: 7, name: 'Elegant Pearl Necklace', price: 450.00, category: 'necklaces', img: './assets/img/collar.png' },
-      { id: 8, name: 'Classic Gold Bracelet', price: 380.00, category: 'bracelets', img: './assets/img/collar.png' },
-      { id: 9, name: 'Emerald Stud Earrings', price: 250.00, category: 'earrings', img: './assets/img/zarcillo.jpg' },
-      { id: 10, name: 'Ruby Engagement Ring', price: 1200.00, category: 'rings', img: './assets/img/anillo.png' },
-      { id: 11, name: 'Simple Silver Bracelet', price: 90.00, category: 'bracelets', img: './assets/img/collar.png' },
-      { id: 12, name: 'Dangling Diamond Earrings', price: 600.00, category: 'earrings', img: './assets/img/zarcillo.jpg' },
-      { id: 13, name: 'Opal Ring', price: 320.00, category: 'rings', img: './assets/img/anillo.png' },
-      { id: 14, name: 'Choker Necklace', price: 180.00, category: 'necklaces', img: './assets/img/collar.png' },
-      { id: 15, name: 'Beaded Bracelet', price: 75.00, category: 'bracelets', img: './assets/img/collar.png' },
-      { id: 16, name: 'Small Hoop Earrings', price: 110.00, category: 'earrings', img: './assets/img/zarcillo.jpg' },
-      { id: 17, name: 'Vintage Style Ring', price: 400.00, category: 'rings', img: './assets/img/anillo.png' },
-      { id: 18, name: 'Layered Necklace', price: 220.00, category: 'necklaces', img: './assets/img/collar.png' },
-      { id: 19, name: 'Golden Hoop Earrings II', price: 155, category: 'earrings', img: './assets/img/zarcillo.jpg' },
-      { id: 20, name: 'Silver Drop Earrings II', price: 125, category: 'earrings', img: './assets/img/zarcillo.jpg' },
-      { id: 21, name: 'Diamond Ring II', price: 985, category: 'rings', img: './assets/img/anillo.png' },
-      { id: 22, name: 'Sapphire Ring II', price: 755, category: 'rings', img: './assets/img/anillo.png' },
-      { id: 23, name: 'Pearl Necklace II', price: 425, category: 'necklaces', img: './assets/img/collar.png' },
-      { id: 24, name: 'Gold Bracelet II', price: 365, category: 'bracelets', img: './assets/img/collar.png' },
-      { id: 25, name: 'Elegant Pearl Necklace II', price: 455, category: 'necklaces', img: './assets/img/collar.png' },
-      { id: 26, name: 'Classic Gold Bracelet II', price: 385, category: 'bracelets', img: './assets/img/collar.png' },
-      { id: 27, name: 'Emerald Stud Earrings II', price: 255, category: 'earrings', img: './assets/img/zarcillo.jpg' },
-      { id: 28, name: 'Ruby Engagement Ring II', price: 1205, category: 'rings', img: './assets/img/anillo.png' },
-      { id: 29, name: 'Simple Silver Bracelet II', price: 95, category: 'bracelets', img: './assets/img/collar.png' },
-      { id: 30, name: 'Dangling Diamond Earrings II', price: 605, category: 'earrings', img: './assets/img/zarcillo.jpg' },
-      { id: 31, name: 'Opal Ring II', price: 325, category: 'rings', img: './assets/img/anillo.png' },
-      { id: 32, name: 'Choker Necklace II', price: 185, category: 'necklaces', img: './assets/img/collar.png' },
-      { id: 33, name: 'Beaded Bracelet II', price: 80, category: 'bracelets', img: './assets/img/collar.png' },
-      { id: 34, name: 'Small Hoop Earrings II', price: 115, category: 'earrings', img: './assets/img/zarcillo.jpg' },
-      { id: 35, name: 'Vintage Style Ring II', price: 405, category: 'rings', img: './assets/img/anillo.png' },
-      { id: 36, name: 'Layered Necklace II', price: 225, category: 'necklaces', img: './assets/img/collar.png' },
-      { id: 37, name: 'Golden Hoop Earrings III', price: 160, category: 'earrings', img: './assets/img/zarcillo.jpg' },
-      { id: 38, name: 'Silver Drop Earrings III', price: 130, category: 'earrings', img: './assets/img/zarcillo.jpg' },
-      { id: 39, name: 'Diamond Ring III', price: 990, category: 'rings', img: './assets/img/anillo.png' },
-      { id: 40, name: 'Sapphire Ring III', price: 760, category: 'rings', img: './assets/img/anillo.png' },
-      { id: 41, name: 'Pearl Necklace III', price: 430, category: 'necklaces', img: './assets/img/collar.png' },
-      { id: 42, name: 'Gold Bracelet III', price: 370, category: 'bracelets', img: './assets/img/collar.png' },
-      { id: 43, name: 'Elegant Pearl Necklace III', price: 460, category: 'necklaces', img: './assets/img/collar.png' },
-      { id: 44, name: 'Classic Gold Bracelet III', price: 390, category: 'bracelets', img: './assets/img/collar.png' },
-      { id: 45, name: 'Emerald Stud Earrings III', price: 260, category: 'earrings', img: './assets/img/zarcillo.jpg' },
-      { id: 46, name: 'Ruby Engagement Ring III', price: 1210, category: 'rings', img: './assets/img/anillo.png' },
-      { id: 47, name: 'Simple Silver Bracelet III', price: 100, category: 'bracelets', img: './assets/img/collar.png' },
-      { id: 48, name: 'Dangling Diamond Earrings III', price: 610, category: 'earrings', img: './assets/img/zarcillo.jpg' },
-      { id: 49, name: 'Opal Ring III', price: 330, category: 'rings', img: './assets/img/anillo.png' },
-      { id: 50, name: 'Choker Necklace III', price: 190, category: 'necklaces', img: './assets/img/collar.png' },
-      { id: 51, name: 'Beaded Bracelet III', price: 85, category: 'bracelets', img: './assets/img/collar.png' },
-      { id: 52, name: 'Small Hoop Earrings III', price: 120, category: 'earrings', img: './assets/img/zarcillo.jpg' },
-      { id: 53, name: 'Vintage Style Ring III', price: 410, category: 'rings', img: './assets/img/anillo.png' },
-      { id: 54, name: 'Layered Necklace III', price: 230, category: 'necklaces', img: './assets/img/collar.png' },
-      { id: 55, name: 'Golden Hoop Earrings IV', price: 170, category: 'earrings', img: './assets/img/zarcillo.jpg' },
-      { id: 56, name: 'Silver Drop Earrings IV', price: 140, category: 'earrings', img: './assets/img/zarcillo.jpg' },
-      { id: 57, name: 'Diamond Ring IV', price: 1000, category: 'rings', img: './assets/img/anillo.png' },
-      { id: 58, name: 'Sapphire Ring IV', price: 770, category: 'rings', img: './assets/img/anillo.png' },
-      { id: 59, name: 'Pearl Necklace IV', price: 440, category: 'necklaces', img: './assets/img/collar.png' },
-      { id: 60, name: 'Gold Bracelet IV', price: 380, category: 'bracelets', img: './assets/img/collar.png' }
-    ];
-
     const productContainer = document.querySelector('.product-container');
     const categoryFilters = document.querySelectorAll('.category-filter');
     const sortNav = document.querySelector('.shop-sort-nav');
@@ -367,19 +716,31 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                   <ul class="list-unstyled">
-                    <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
+                    <li><a class="btn btn-success text-white mt-2 view-product-btn" href="#" data-product-id="${product.id}"><i class="far fa-eye"></i></a></li>
                     <li><a class="btn btn-success text-white mt-2 add-to-cart-btn" href="#"><i class="fas fa-cart-plus"></i></a></li>
                   </ul>
                 </div>
               </div>
               <div class="card-body text-center">
-                <a href="shop-single.html" class="h3 text-decoration-none">${product.name}</a>
+                <a href="#" class="h3 text-decoration-none">${product.name}</a>
                 <p class="mb-0">$${product.price.toFixed(2)}</p>
               </div>
             </div>
           </div>
         `;
         productContainer.innerHTML += productHTML;
+      });
+
+      // Agregar event listeners específicos para los botones de vista de producto
+      document.querySelectorAll('.view-product-btn').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const productId = this.dataset.productId;
+          if (productId && saveProductToLocalStorage(productId)) {
+            window.location.href = 'shop-single.html';
+          }
+        });
       });
     }
 
@@ -528,10 +889,10 @@ document.addEventListener("DOMContentLoaded", function () {
       sortNav.querySelectorAll('.nav-link').forEach(link => {
         link.classList.remove('active');
         if (link.dataset.sort === 'a-z') {
-          link.innerHTML = 'A to Z'; 
+          link.innerHTML = 'A to Z';
         }
         if (link.dataset.sort === 'price') {
-          link.innerHTML = 'Price'; 
+          link.innerHTML = 'Price';
         }
       });
 
@@ -564,22 +925,26 @@ document.addEventListener("DOMContentLoaded", function () {
     updateShopView();
   }
 
+  // ==================== TEMA OSCURO ====================
   const themeToggleButton = document.getElementById("toggle-theme-btn");
 
-  if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('theme-dark');
+  if (themeToggleButton) {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('theme-dark');
+    }
+
+    themeToggleButton.addEventListener("click", function () {
+      document.body.classList.toggle("theme-dark");
+
+      if (document.body.classList.contains("theme-dark")) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.removeItem('theme');
+      }
+    });
   }
 
-  themeToggleButton.addEventListener("click", function () {
-    document.body.classList.toggle("theme-dark");
-
-    if (document.body.classList.contains("theme-dark")) {
-      localStorage.setItem('theme', 'dark');
-    } else {
-      localStorage.removeItem('theme');
-    }
-  });
-
+  // ==================== CAMBIO DE IDIOMA ====================
   function setupLanguageSwitcher() {
     const languageButtons = document.querySelectorAll("[data-lang]");
     const translatableElements = document.querySelectorAll("[data-lang-en], [data-lang-es]");
@@ -608,4 +973,7 @@ document.addEventListener("DOMContentLoaded", function () {
     changeLanguage(savedLang);
   }
 
+  // ==================== HACER updateCart GLOBAL ====================
+  window.updateCart = updateCart;
+  window.addToCart = addToCart;
 });
