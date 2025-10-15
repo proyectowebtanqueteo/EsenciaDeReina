@@ -3,19 +3,31 @@ document.addEventListener("DOMContentLoaded", function () {
   const allProducts = [
     {
       id: 1,
-      name: 'Anillos de plata',
+      name: { en: 'Silver Rings', es: 'Anillos de plata' },
       price: 350,
       category: 'rings',
       img: './assets/img/productos/anillos/1.jpg',
-      description: 'Elegante anillo de plata 925, perfecto para cualquier ocasión. Diseño clásico y atemporal que resalta la belleza de tus manos.',
-      color: 'Plata',
-      specifications: [
-        'Material: Plata 925',
-        'Tamaño ajustable',
-        'Hipoalergénico',
-        'Hecho a mano',
-        'Incluye estuche de regalo'
-      ],
+      description: {
+        en: 'Elegant 925 silver ring, perfect for any occasion. Classic and timeless design that highlights the beauty of your hands.',
+        es: 'Elegante anillo de plata 925, perfecto para cualquier ocasión. Diseño clásico y atemporal que resalta la belleza de tus manos.'
+      },
+      color: { en: 'Silver', es: 'Plata' },
+      specifications: {
+        en: [
+          'Material: 925 Silver',
+          'Adjustable size',
+          'Hypoallergenic',
+          'Handmade',
+          'Includes gift box'
+        ],
+        es: [
+          'Material: Plata 925',
+          'Tamaño ajustable',
+          'Hipoalergénico',
+          'Hecho a mano',
+          'Incluye estuche de regalo'
+        ]
+      },
       images: [
         'assets/img/productos/anillos/1.jpg',
         'assets/img/productos/anillos/2.jpg',
@@ -24,19 +36,31 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 2,
-      name: 'Anillos de oro',
+      name: { en: 'Gold Rings', es: 'Anillos de oro' },
       price: 480,
       category: 'rings',
       img: './assets/img/productos/anillos/5.jpg',
-      description: 'Exclusivo anillo de oro 18k, ideal para ocasiones especiales. Brillo y elegancia incomparables.',
-      color: 'Oro',
-      specifications: [
-        'Material: Oro 18k',
-        'Tamaño ajustable',
-        'Hipoalergénico',
-        'Hecho a mano',
-        'Incluye estuche de lujo'
-      ],
+      description: {
+        en: 'Exclusive 18k gold ring, ideal for special occasions. Incomparable shine and elegance.',
+        es: 'Exclusivo anillo de oro 18k, ideal para ocasiones especiales. Brillo y elegancia incomparables.'
+      },
+      color: { en: 'Gold', es: 'Oro' },
+      specifications: {
+        en: [
+          'Material: 18k Gold',
+          'Adjustable size',
+          'Hypoallergenic',
+          'Handmade',
+          'Includes luxury box'
+        ],
+        es: [
+          'Material: Oro 18k',
+          'Tamaño ajustable',
+          'Hipoalergénico',
+          'Hecho a mano',
+          'Incluye estuche de lujo'
+        ]
+      },
       images: [
         'assets/img/productos/anillos/5.jpg',
         'assets/img/productos/anillos/4.jpg',
@@ -45,19 +69,31 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 3,
-      name: 'Cruces de oro',
+      name: { en: 'Gold Crosses', es: 'Cruces de oro' },
       price: 520,
       category: 'necklaces',
       img: './assets/img/productos/collares/11.jpg',
-      description: 'Hermosa cruz de oro 18k, símbolo de fe y elegancia. Perfecta para regalar o lucir en ocasiones especiales.',
-      color: 'Oro',
-      specifications: [
-        'Material: Oro 18k',
-        'Cadena incluida',
-        'Hipoalergénico',
-        'Hecho a mano',
-        'Incluye estuche de lujo'
-      ],
+      description: {
+        en: 'Beautiful 18k gold cross, symbol of faith and elegance. Perfect to give as a gift or wear on special occasions.',
+        es: 'Hermosa cruz de oro 18k, símbolo de fe y elegancia. Perfecta para regalar o lucir en ocasiones especiales.'
+      },
+      color: { en: 'Gold', es: 'Oro' },
+      specifications: {
+        en: [
+          'Material: 18k Gold',
+          'Chain included',
+          'Hypoallergenic',
+          'Handmade',
+          'Includes luxury box'
+        ],
+        es: [
+          'Material: Oro 18k',
+          'Cadena incluida',
+          'Hipoalergénico',
+          'Hecho a mano',
+          'Incluye estuche de lujo'
+        ]
+      },
       images: [
         'assets/img/productos/collares/11.jpg',
         'assets/img/productos/collares/12.jpg',
@@ -66,19 +102,31 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 4,
-      name: 'Corazones de oro',
+      name: { en: 'Gold Hearts', es: 'Corazones de oro' },
       price: 620,
       category: 'necklaces',
       img: './assets/img/productos/collares/9.jpg',
-      description: 'Collar de corazones de oro 18k, diseño romántico y elegante. Ideal para regalar a alguien especial o lucir en ocasiones únicas.',
-      color: 'Oro',
-      specifications: [
-        'Material: Oro 18k',
-        'Cadena de 45cm incluida',
-        'Hipoalergénico',
-        'Hecho a mano',
-        'Incluye estuche de lujo'
-      ],
+      description: {
+        en: '18k gold heart necklace, romantic and elegant design. Ideal to give to someone special or wear on unique occasions.',
+        es: 'Collar de corazones de oro 18k, diseño romántico y elegante. Ideal para regalar a alguien especial o lucir en ocasiones únicas.'
+      },
+      color: { en: 'Gold', es: 'Oro' },
+      specifications: {
+        en: [
+          'Material: 18k Gold',
+          '45cm chain included',
+          'Hypoallergenic',
+          'Handmade',
+          'Includes luxury box'
+        ],
+        es: [
+          'Material: Oro 18k',
+          'Cadena de 45cm incluida',
+          'Hipoalergénico',
+          'Hecho a mano',
+          'Incluye estuche de lujo'
+        ]
+      },
       images: [
         'assets/img/productos/collares/2.jpg',
         'assets/img/productos/collares/9.jpg',
@@ -87,19 +135,31 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 5,
-      name: 'Virgenes de oro',
+      name: { en: 'Gold Virgin Mary', es: 'Vírgenes de oro' },
       price: 850,
       category: 'necklaces',
       img: './assets/img/productos/collares/1.jpg',
-      description: 'Collar Virgen de oro 18k, símbolo de protección y fe. Pieza única y elegante para ocasiones especiales.',
-      color: 'Oro',
-      specifications: [
-        'Material: Oro 18k',
-        'Cadena de 45cm incluida',
-        'Hipoalergénico',
-        'Hecho a mano',
-        'Incluye estuche de lujo'
-      ],
+      description: {
+        en: '18k gold Virgin Mary necklace, symbol of protection and faith. Unique and elegant piece for special occasions.',
+        es: 'Collar Virgen de oro 18k, símbolo de protección y fe. Pieza única y elegante para ocasiones especiales.'
+      },
+      color: { en: 'Gold', es: 'Oro' },
+      specifications: {
+        en: [
+          'Material: 18k Gold',
+          '45cm chain included',
+          'Hypoallergenic',
+          'Handmade',
+          'Includes luxury box'
+        ],
+        es: [
+          'Material: Oro 18k',
+          'Cadena de 45cm incluida',
+          'Hipoalergénico',
+          'Hecho a mano',
+          'Incluye estuche de lujo'
+        ]
+      },
       images: [
         'assets/img/productos/collares/1.jpg',
         'assets/img/productos/collares/5.jpg',
@@ -108,19 +168,31 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 6,
-      name: 'Collares estilo conchas de oro',
+      name: { en: 'Gold Shell Necklaces', es: 'Collares estilo conchas de oro' },
       price: 780,
       category: 'necklaces',
       img: 'assets/img/productos/collares/4.jpg',
-      description: 'Collar de oro 18k con diseño de conchas, elegante y veraniego. Perfecto para destacar en cualquier ocasión.',
-      color: 'Oro',
-      specifications: [
-        'Material: Oro 18k',
-        'Diseño de conchas',
-        'Cadena incluida',
-        'Hipoalergénico',
-        'Hecho a mano'
-      ],
+      description: {
+        en: '18k gold necklace with shell design, elegant and summery. Perfect to stand out on any occasion.',
+        es: 'Collar de oro 18k con diseño de conchas, elegante y veraniego. Perfecto para destacar en cualquier ocasión.'
+      },
+      color: { en: 'Gold', es: 'Oro' },
+      specifications: {
+        en: [
+          'Material: 18k Gold',
+          'Shell design',
+          'Chain included',
+          'Hypoallergenic',
+          'Handmade'
+        ],
+        es: [
+          'Material: Oro 18k',
+          'Diseño de conchas',
+          'Cadena incluida',
+          'Hipoalergénico',
+          'Hecho a mano'
+        ]
+      },
       images: [
         'assets/img/productos/collares/4.jpg',
         'assets/img/productos/collares/3.jpg'
@@ -128,19 +200,31 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 7,
-      name: 'Collares estilo van cleef',
+      name: { en: 'Van Cleef Style Necklaces', es: 'Collares estilo van cleef' },
       price: 950,
       category: 'necklaces',
       img: 'assets/img/productos/collares/6.jpg',
-      description: 'Collar de oro 18k estilo Van Cleef, elegante y sofisticado. Ideal para ocasiones especiales.',
-      color: 'Oro',
-      specifications: [
-        'Material: Oro 18k',
-        'Diseño inspirado en Van Cleef',
-        'Ajustable',
-        'Hipoalergénico',
-        'Hecho a mano'
-      ],
+      description: {
+        en: '18k gold Van Cleef style necklace, elegant and sophisticated. Ideal for special occasions.',
+        es: 'Collar de oro 18k estilo Van Cleef, elegante y sofisticado. Ideal para ocasiones especiales.'
+      },
+      color: { en: 'Gold', es: 'Oro' },
+      specifications: {
+        en: [
+          'Material: 18k Gold',
+          'Van Cleef inspired design',
+          'Adjustable',
+          'Hypoallergenic',
+          'Handmade'
+        ],
+        es: [
+          'Material: Oro 18k',
+          'Diseño inspirado en Van Cleef',
+          'Ajustable',
+          'Hipoalergénico',
+          'Hecho a mano'
+        ]
+      },
       images: [
         'assets/img/productos/collares/6.jpg',
         'assets/img/productos/collares/7.jpg'
@@ -148,18 +232,29 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 8,
-      name: 'Dijes de oro',
+      name: { en: 'Gold Charms', es: 'Dijes de oro' },
       price: 420,
       category: 'pendants',
       img: './assets/img/productos/dijes/2.jpg',
-      description: 'Dije de oro 18k, elegante y versátil para cualquier ocasión. Un toque de distinción para tu cadena favorita.',
-      color: 'Oro',
-      specifications: [
-        'Material: Oro 18k',
-        'Diseño clásico',
-        'Hipoalergénico',
-        'Hecho a mano'
-      ],
+      description: {
+        en: '18k gold charm, elegant and versatile for any occasion. A touch of distinction for your favorite chain.',
+        es: 'Dije de oro 18k, elegante y versátil para cualquier ocasión. Un toque de distinción para tu cadena favorita.'
+      },
+      color: { en: 'Gold', es: 'Oro' },
+      specifications: {
+        en: [
+          'Material: 18k Gold',
+          'Classic design',
+          'Hypoallergenic',
+          'Handmade'
+        ],
+        es: [
+          'Material: Oro 18k',
+          'Diseño clásico',
+          'Hipoalergénico',
+          'Hecho a mano'
+        ]
+      },
       images: [
         'assets/img/productos/dijes/2.jpg',
         'assets/img/productos/dijes/3.jpg',
@@ -168,18 +263,29 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 9,
-      name: 'Dijes variados',
+      name: { en: 'Assorted Charms', es: 'Dijes variados' },
       price: 350,
       category: 'pendants',
       img: './assets/img/productos/dijes/1.jpg',
-      description: 'Colección de dijes variados en oro 18k, ideales para personalizar tu estilo y combinar con diferentes cadenas.',
-      color: 'Oro',
-      specifications: [
-        'Material: Oro 18k',
-        'Varios diseños',
-        'Hipoalergénico',
-        'Hecho a mano'
-      ],
+      description: {
+        en: 'Collection of assorted 18k gold charms, ideal to personalize your style and combine with different chains.',
+        es: 'Colección de dijes variados en oro 18k, ideales para personalizar tu estilo y combinar con diferentes cadenas.'
+      },
+      color: { en: 'Gold', es: 'Oro' },
+      specifications: {
+        en: [
+          'Material: 18k Gold',
+          'Various designs',
+          'Hypoallergenic',
+          'Handmade'
+        ],
+        es: [
+          'Material: Oro 18k',
+          'Varios diseños',
+          'Hipoalergénico',
+          'Hecho a mano'
+        ]
+      },
       images: [
         'assets/img/productos/dijes/1.jpg',
         'assets/img/productos/dijes/5.jpg'
@@ -187,18 +293,29 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 10,
-      name: 'Dijes religiosos de oro',
+      name: { en: 'Religious Gold Charms', es: 'Dijes religiosos de oro' },
       price: 480,
       category: 'pendants',
       img: './assets/img/productos/dijes/4.jpg',
-      description: 'Dijes religiosos en oro 18k, símbolos de fe y protección. Perfectos para expresar tu espiritualidad con elegancia.',
-      color: 'Oro',
-      specifications: [
-        'Material: Oro 18k',
-        'Motivos religiosos',
-        'Hipoalergénico',
-        'Hecho a mano'
-      ],
+      description: {
+        en: 'Religious charms in 18k gold, symbols of faith and protection. Perfect to express your spirituality with elegance.',
+        es: 'Dijes religiosos en oro 18k, símbolos de fe y protección. Perfectos para expresar tu espiritualidad con elegancia.'
+      },
+      color: { en: 'Gold', es: 'Oro' },
+      specifications: {
+        en: [
+          'Material: 18k Gold',
+          'Religious motifs',
+          'Hypoallergenic',
+          'Handmade'
+        ],
+        es: [
+          'Material: Oro 18k',
+          'Motivos religiosos',
+          'Hipoalergénico',
+          'Hecho a mano'
+        ]
+      },
       images: [
         'assets/img/productos/dijes/4.jpg',
         'assets/img/productos/dijes/6.jpg',
@@ -207,19 +324,31 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 11,
-      name: 'Pulsera de oro clásica',
+      name: { en: 'Classic Gold Bracelet', es: 'Pulsera de oro clásica' },
       price: 690,
       category: 'bracelets',
       img: './assets/img/productos/pulseras/1.jpg',
-      description: 'Pulsera de oro 18k, diseño clásico y elegante para cualquier ocasión. Un básico imprescindible en tu colección.',
-      color: 'Oro',
-      specifications: [
-        'Material: Oro 18k',
-        'Diseño clásico',
-        'Ajustable',
-        'Hipoalergénico',
-        'Hecho a mano'
-      ],
+      description: {
+        en: '18k gold bracelet, classic and elegant design for any occasion. An essential basic in your collection.',
+        es: 'Pulsera de oro 18k, diseño clásico y elegante para cualquier ocasión. Un básico imprescindible en tu colección.'
+      },
+      color: { en: 'Gold', es: 'Oro' },
+      specifications: {
+        en: [
+          'Material: 18k Gold',
+          'Classic design',
+          'Adjustable',
+          'Hypoallergenic',
+          'Handmade'
+        ],
+        es: [
+          'Material: Oro 18k',
+          'Diseño clásico',
+          'Ajustable',
+          'Hipoalergénico',
+          'Hecho a mano'
+        ]
+      },
       images: [
         'assets/img/productos/pulseras/1.jpg',
         'assets/img/productos/pulseras/3.jpg',
@@ -228,36 +357,58 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 12,
-      name: 'Pulsera tejida',
+      name: { en: 'Woven Bracelet', es: 'Pulsera tejida' },
       price: 520,
       category: 'bracelets',
       img: './assets/img/productos/pulseras/2.jpg',
-      description: 'Pulsera tejida, mezcla de tradición y modernidad. Ideal para quienes buscan un toque artesanal y sofisticado.',
-      color: 'Oro',
-      specifications: [
-        'Tejido artesanal',
-        'Ajustable',
-        'Hipoalergénico',
-        'Hecho a mano'
-      ],
+      description: {
+        en: 'Woven bracelet, mix of tradition and modernity. Ideal for those looking for an artisanal and sophisticated touch.',
+        es: 'Pulsera tejida, mezcla de tradición y modernidad. Ideal para quienes buscan un toque artesanal y sofisticado.'
+      },
+      color: { en: 'Gold', es: 'Oro' },
+      specifications: {
+        en: [
+          'Artisanal weaving',
+          'Adjustable',
+          'Hypoallergenic',
+          'Handmade'
+        ],
+        es: [
+          'Tejido artesanal',
+          'Ajustable',
+          'Hipoalergénico',
+          'Hecho a mano'
+        ]
+      },
       images: [
         'assets/img/productos/pulseras/2.jpg'
       ]
     },
     {
       id: 13,
-      name: 'Pulsera de perlas clásica',
+      name: { en: 'Classic Pearl Bracelet', es: 'Pulsera de perlas clásica' },
       price: 430,
       category: 'bracelets',
       img: './assets/img/productos/pulseras/7.jpg',
-      description: 'Pulsera clásica de perlas naturales, símbolo de elegancia y sofisticación atemporal.',
-      color: 'Perla',
-      specifications: [
-        'Material: Perlas naturales',
-        'Cierre de oro 18k',
-        'Hecho a mano',
-        'Ajustable'
-      ],
+      description: {
+        en: 'Classic natural pearl bracelet, symbol of timeless elegance and sophistication.',
+        es: 'Pulsera clásica de perlas naturales, símbolo de elegancia y sofisticación atemporal.'
+      },
+      color: { en: 'Pearl', es: 'Perla' },
+      specifications: {
+        en: [
+          'Material: Natural pearls',
+          '18k gold clasp',
+          'Handmade',
+          'Adjustable'
+        ],
+        es: [
+          'Material: Perlas naturales',
+          'Cierre de oro 18k',
+          'Hecho a mano',
+          'Ajustable'
+        ]
+      },
       images: [
         'assets/img/productos/pulseras/7.jpg',
         'assets/img/productos/pulseras/4.jpg'
@@ -265,36 +416,58 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 14,
-      name: 'Pulsera de perlas modernas',
+      name: { en: 'Modern Pearl Bracelet', es: 'Pulsera de perlas modernas' },
       price: 470,
       category: 'bracelets',
       img: './assets/img/productos/pulseras/6.jpg',
-      description: 'Pulsera de perlas con diseño moderno y detalles en oro, perfecta para un look contemporáneo.',
-      color: 'Perla',
-      specifications: [
-        'Material: Perlas naturales y oro 18k',
-        'Diseño moderno',
-        'Hecho a mano',
-        'Ajustable'
-      ],
+      description: {
+        en: 'Pearl bracelet with modern design and gold details, perfect for a contemporary look.',
+        es: 'Pulsera de perlas con diseño moderno y detalles en oro, perfecta para un look contemporáneo.'
+      },
+      color: { en: 'Pearl', es: 'Perla' },
+      specifications: {
+        en: [
+          'Material: Natural pearls and 18k gold',
+          'Modern design',
+          'Handmade',
+          'Adjustable'
+        ],
+        es: [
+          'Material: Perlas naturales y oro 18k',
+          'Diseño moderno',
+          'Hecho a mano',
+          'Ajustable'
+        ]
+      },
       images: [
         'assets/img/productos/pulseras/6.jpg'
       ]
     },
     {
       id: 15,
-      name: 'Zarcillos de oro estilo tropical',
+      name: { en: 'Tropical Style Gold Earrings', es: 'Zarcillos de oro estilo tropical' },
       price: 520,
       category: 'earrings',
       img: './assets/img/productos/zarcillos/6.jpg',
-      description: 'Zarcillos de oro 18k con diseños tropicales, ideales para un look fresco y veraniego.',
-      color: 'Oro',
-      specifications: [
-        'Material: Oro 18k',
-        'Diseño tropical',
-        'Hipoalergénico',
-        'Hecho a mano'
-      ],
+      description: {
+        en: '18k gold earrings with tropical designs, ideal for a fresh and summery look.',
+        es: 'Zarcillos de oro 18k con diseños tropicales, ideales para un look fresco y veraniego.'
+      },
+      color: { en: 'Gold', es: 'Oro' },
+      specifications: {
+        en: [
+          'Material: 18k Gold',
+          'Tropical design',
+          'Hypoallergenic',
+          'Handmade'
+        ],
+        es: [
+          'Material: Oro 18k',
+          'Diseño tropical',
+          'Hipoalergénico',
+          'Hecho a mano'
+        ]
+      },
       images: [
         'assets/img/productos/zarcillos/3.jpg',
         'assets/img/productos/zarcillos/6.jpg',
@@ -303,18 +476,29 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 16,
-      name: 'Zarcillos de oro estilo herval',
+      name: { en: 'Herbal Style Gold Earrings', es: 'Zarcillos de oro estilo herval' },
       price: 490,
       category: 'earrings',
       img: './assets/img/productos/zarcillos/1.jpg',
-      description: 'Zarcillos de oro 18k inspirados en formas herbales, elegantes y delicados para cualquier ocasión.',
-      color: 'Oro',
-      specifications: [
-        'Material: Oro 18k',
-        'Diseño herbal',
-        'Hipoalergénico',
-        'Hecho a mano'
-      ],
+      description: {
+        en: '18k gold earrings inspired by herbal shapes, elegant and delicate for any occasion.',
+        es: 'Zarcillos de oro 18k inspirados en formas herbales, elegantes y delicados para cualquier ocasión.'
+      },
+      color: { en: 'Gold', es: 'Oro' },
+      specifications: {
+        en: [
+          'Material: 18k Gold',
+          'Herbal design',
+          'Hypoallergenic',
+          'Handmade'
+        ],
+        es: [
+          'Material: Oro 18k',
+          'Diseño herbal',
+          'Hipoalergénico',
+          'Hecho a mano'
+        ]
+      },
       images: [
         'assets/img/productos/zarcillos/1.jpg',
         'assets/img/productos/zarcillos/2.jpg',
@@ -323,24 +507,39 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 17,
-      name: 'Zarcillos de plata clásicos',
+      name: { en: 'Classic Silver Earrings', es: 'Zarcillos de plata clásicos' },
       price: 320,
       category: 'earrings',
       img: './assets/img/productos/zarcillos/4.jpg',
-      description: 'Zarcillos clásicos de plata 925, perfectos para un estilo elegante y atemporal.',
-      color: 'Plata',
-      specifications: [
-        'Material: Plata 925',
-        'Diseño clásico',
-        'Hipoalergénico',
-        'Hecho a mano'
-      ],
+      description: {
+        en: 'Classic 925 silver earrings, perfect for an elegant and timeless style.',
+        es: 'Zarcillos clásicos de plata 925, perfectos para un estilo elegante y atemporal.'
+      },
+      color: { en: 'Silver', es: 'Plata' },
+      specifications: {
+        en: [
+          'Material: 925 Silver',
+          'Classic design',
+          'Hypoallergenic',
+          'Handmade'
+        ],
+        es: [
+          'Material: Plata 925',
+          'Diseño clásico',
+          'Hipoalergénico',
+          'Hecho a mano'
+        ]
+      },
       images: [
         'assets/img/productos/zarcillos/4.jpg'
       ]
-    },
-
+    }
   ];
+
+  // ==================== FUNCIÓN PARA OBTENER NOMBRE TRADUCIDO ====================
+  function getTranslatedProductName(product, lang = 'en') {
+    return typeof product.name === 'object' ? product.name[lang] : product.name;
+  }
 
   // ==================== FUNCIÓN PARA GUARDAR PRODUCTO ====================
   function saveProductToLocalStorage(productId) {
@@ -554,9 +753,8 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCart();
   }
 
-  // ==================== EVENT DELEGATION MEJORADO ====================
+  // ==================== EVENT DELEGATION ====================
   document.body.addEventListener('click', function (e) {
-    // Primero, verificar si es un clic en el ícono del ojo
     if (e.target.classList.contains('fa-eye') || e.target.closest('.fa-eye')) {
       e.preventDefault();
       e.stopPropagation();
@@ -566,7 +764,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (card && card.dataset.id) {
         const productId = card.dataset.id;
-        console.log('Click en ojo, ID:', productId);
         if (saveProductToLocalStorage(productId)) {
           setTimeout(() => {
             window.location.href = 'shop-single.html';
@@ -576,7 +773,6 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // Verificar si es un clic en el botón de añadir al carrito
     if (e.target.classList.contains('fa-cart-plus') || e.target.closest('.add-to-cart-btn')) {
       e.preventDefault();
       e.stopPropagation();
@@ -597,7 +793,6 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // Verificar si es un clic en el nombre del producto
     if (e.target.closest('.h3.text-decoration-none')) {
       const nameLink = e.target.closest('.h3.text-decoration-none');
       e.preventDefault();
@@ -606,7 +801,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const card = nameLink.closest('.product-wap');
       if (card && card.dataset.id) {
         const productId = card.dataset.id;
-        console.log('Click en nombre, ID:', productId);
         if (saveProductToLocalStorage(productId)) {
           setTimeout(() => {
             window.location.href = 'shop-single.html';
@@ -616,7 +810,6 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // ELIMINAR DEL CARRITO
     if (e.target.closest('.remove-from-cart')) {
       e.preventDefault();
       e.stopPropagation();
@@ -630,7 +823,6 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // CAMBIAR CANTIDAD
     if (e.target.closest('.quantity-change')) {
       e.preventDefault();
       e.stopPropagation();
@@ -649,7 +841,6 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // LIMPIAR CARRITO
     if (e.target.id === 'clear-cart-btn') {
       e.preventDefault();
       cart = [];
@@ -657,7 +848,6 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // CHECKOUT (WHATSAPP)
     if (e.target.closest('#checkout-btn')) {
       e.preventDefault();
       const now = new Date();
@@ -677,7 +867,7 @@ document.addEventListener("DOMContentLoaded", function () {
         mensaje += `- ${item.name} (Cantidad: ${item.quantity})\n`;
       });
       const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-      mensaje += `\nTotal: $${total.toFixed(2)}`;
+      mensaje += `\nTotal: ${total.toFixed(2)}`;
 
       const numero = '19452179299';
       const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
@@ -699,17 +889,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const itemsPerPage = 9;
 
     function renderProducts(productsToRender) {
+      const currentLang = localStorage.getItem('preferredLanguage') || 'en';
       productContainer.innerHTML = '';
       if (productsToRender.length === 0) {
-        const currentLang = localStorage.getItem('preferredLanguage') || 'en';
         const noProductsText = currentLang === 'es' ? 'No se encontraron productos.' : 'No products found.';
         productContainer.innerHTML = `<div class="col-12 text-center"><p>${noProductsText}</p></div>`;
         return;
       }
       productsToRender.forEach(product => {
+        const productName = getTranslatedProductName(product, currentLang);
         const productHTML = `
           <div class="col-md-4 product-card" data-category="${product.category}">
-            <div class="card mb-4 product-wap rounded-0" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-img="${product.img}">
+            <div class="card mb-4 product-wap rounded-0" data-id="${product.id}" data-name="${productName}" data-price="${product.price}" data-img="${product.img}">
               <div class="card rounded-0">
                 <div class="product-img-container">
                   <img class="card-img rounded-0 img-fluid" src="${product.img}">
@@ -722,8 +913,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
               </div>
               <div class="card-body text-center">
-                <a href="#" class="h3 text-decoration-none">${product.name}</a>
-                <p class="mb-0">$${product.price.toFixed(2)}</p>
+                <a href="#" class="h3 text-decoration-none">${productName}</a>
+                <p class="mb-0">${product.price.toFixed(2)}</p>
               </div>
             </div>
           </div>
@@ -731,7 +922,6 @@ document.addEventListener("DOMContentLoaded", function () {
         productContainer.innerHTML += productHTML;
       });
 
-      // Agregar event listeners específicos para los botones de vista de producto
       document.querySelectorAll('.view-product-btn').forEach(btn => {
         btn.addEventListener('click', function (e) {
           e.preventDefault();
@@ -822,6 +1012,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function updateShopView() {
+      const currentLang = localStorage.getItem('preferredLanguage') || 'en';
       const activeCategory = document.querySelector('.category-filter.active').dataset.filter;
       const searchTerm = searchInput.value.toLowerCase().trim();
       const sortType = sortNav.dataset.sortType || 'featured';
@@ -832,12 +1023,19 @@ document.addEventListener("DOMContentLoaded", function () {
         processedProducts = processedProducts.filter(p => p.category === activeCategory);
       }
       if (searchTerm) {
-        processedProducts = processedProducts.filter(p => p.name.toLowerCase().includes(searchTerm));
+        processedProducts = processedProducts.filter(p => {
+          const name = getTranslatedProductName(p, currentLang);
+          return name.toLowerCase().includes(searchTerm);
+        });
       }
 
       switch (sortType) {
         case 'a-z':
-          processedProducts.sort((a, b) => a.name.localeCompare(b.name));
+          processedProducts.sort((a, b) => {
+            const nameA = getTranslatedProductName(a, currentLang);
+            const nameB = getTranslatedProductName(b, currentLang);
+            return nameA.localeCompare(nameB);
+          });
           break;
         case 'price':
           processedProducts.sort((a, b) => a.price - b.price);
@@ -957,8 +1155,25 @@ document.addEventListener("DOMContentLoaded", function () {
         if (text) {
           element.innerHTML = text;
         }
+
+        // Para placeholders
+        const placeholder = element.getAttribute(`data-lang-placeholder-${lang}`);
+        if (placeholder) {
+          element.placeholder = placeholder;
+        }
       });
+
       localStorage.setItem('preferredLanguage', lang);
+
+      // Re-renderizar productos si estamos en shop.html
+      if (window.location.pathname.endsWith('shop.html')) {
+        updateShopView();
+      }
+
+      // Actualizar shop-single.html si estamos allí
+      if (window.location.pathname.endsWith('shop-single.html')) {
+        updateProductDetails(lang);
+      }
     }
 
     languageButtons.forEach(button => {
@@ -973,7 +1188,44 @@ document.addEventListener("DOMContentLoaded", function () {
     changeLanguage(savedLang);
   }
 
-  // ==================== HACER updateCart GLOBAL ====================
+  // ==================== ACTUALIZAR DETALLES DEL PRODUCTO (shop-single) ====================
+  function updateProductDetails(lang) {
+    const product = JSON.parse(localStorage.getItem('selectedProduct'));
+    if (!product) return;
+
+    const nameElem = document.getElementById('product-name');
+    const descElem = document.getElementById('product-description');
+    const colorElem = document.getElementById('product-color');
+    const specsElem = document.getElementById('product-specs');
+
+    if (nameElem && product.name) {
+      const name = typeof product.name === 'object' ? product.name[lang] : product.name;
+      nameElem.textContent = name;
+    }
+
+    if (descElem && product.description) {
+      const desc = typeof product.description === 'object' ? product.description[lang] : product.description;
+      descElem.textContent = desc;
+    }
+
+    if (colorElem && product.color) {
+      const color = typeof product.color === 'object' ? product.color[lang] : product.color;
+      colorElem.innerHTML = `<strong>${color}</strong>`;
+    }
+
+    if (specsElem && product.specifications) {
+      const specs = typeof product.specifications === 'object' ? product.specifications[lang] : product.specifications;
+      specsElem.innerHTML = '';
+      specs.forEach(spec => {
+        const li = document.createElement('li');
+        li.textContent = spec;
+        specsElem.appendChild(li);
+      });
+    }
+  }
+
+  // ==================== HACER FUNCIONES GLOBALES ====================
   window.updateCart = updateCart;
   window.addToCart = addToCart;
+  window.updateProductDetails = updateProductDetails;
 });

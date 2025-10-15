@@ -70,16 +70,17 @@
                             <h1 class="h2" id="product-name"></h1>
                             <p class="h3 py-2" id="product-price"></p>
 
-                            <h6>Descripción:</h6>
+                            <h6 data-lang-en="Description:" data-lang-es="Descripción:">Descripción:</h6>
                             <p class="product-description" id="product-description"></p>
                             <ul class="list-inline">
                                 <li class="list-inline-item">
-                                    <h6>Color disponible :</h6>
+                                    <h6 data-lang-en="Available color:" data-lang-es="Color disponible:">Color
+                                        disponible:</h6>
                                 </li>
                                 <li class="list-inline-item" id="product-color"></li>
                             </ul>
 
-                            <h6>Especificaciones:</h6>
+                            <h6 data-lang-en="Specifications:" data-lang-es="Especificaciones:">Especificaciones:</h6>
                             <ul id="product-specs"></ul>
 
                             <form action="" method="GET" id="product-form">
@@ -89,7 +90,7 @@
                                     <div class="col-auto">
                                         <ul class="list-inline pb-3">
                                             <li class="list-inline-item text-right">
-                                                Cantidad
+                                                <span data-lang-en="Quantity" data-lang-es="Cantidad">Cantidad</span>
                                                 <input type="hidden" name="product-quanity" id="product-quanity"
                                                     value="1">
                                             </li>
@@ -105,11 +106,12 @@
                                 <div class="row pb-3">
                                     <div class="col d-grid">
                                         <button type="submit" class="btn btn-success btn-lg" name="submit" value="buy"
-                                            id="buy-btn">Comprar</button>
+                                            id="buy-btn" data-lang-en="Buy" data-lang-es="Comprar">Comprar</button>
                                     </div>
                                     <div class="col d-grid">
                                         <button type="button" class="btn btn-success btn-lg" name="submit"
-                                            value="addtocard" id="add-to-cart-btn">Añadir al Carrito</button>
+                                            value="addtocard" id="add-to-cart-btn" data-lang-en="Add to Cart"
+                                            data-lang-es="Añadir al Carrito">Añadir al Carrito</button>
                                     </div>
                                 </div>
                             </form>
@@ -131,29 +133,35 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Redirigir si no hay producto seleccionado
             const product = JSON.parse(localStorage.getItem('selectedProduct'));
+            const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+
             if (!product) {
-                document.getElementById('product-name').textContent = 'Producto no encontrado';
+                document.getElementById('product-name').textContent = currentLang === 'es' ? 'Producto no encontrado' : 'Product not found';
                 document.getElementById('product-price').textContent = '$0.00';
-                document.getElementById('product-description').textContent = 'Por favor, selecciona un producto desde la tienda.';
+                document.getElementById('product-description').textContent = currentLang === 'es' ? 'Por favor, selecciona un producto desde la tienda.' : 'Please select a product from the store.';
                 return;
             }
 
-            // Renderizar datos del producto
-            document.getElementById('product-name').textContent = product.name;
+            // Renderizar datos del producto con idioma
+            const productName = typeof product.name === 'object' ? product.name[currentLang] : product.name;
+            const productDesc = typeof product.description === 'object' ? product.description[currentLang] : product.description;
+            const productColor = typeof product.color === 'object' ? product.color[currentLang] : product.color;
+            const productSpecs = typeof product.specifications === 'object' ? product.specifications[currentLang] : product.specifications;
+
+            document.getElementById('product-name').textContent = productName;
             document.getElementById('product-price').textContent = `$${product.price.toFixed(2)}`;
-            document.getElementById('product-description').textContent = product.description;
+            document.getElementById('product-description').textContent = productDesc;
 
             const colorElem = document.getElementById('product-color');
-            if (colorElem && product.color) {
-                colorElem.innerHTML = `<strong>${product.color}</strong>`;
+            if (colorElem && productColor) {
+                colorElem.innerHTML = `<strong>${productColor}</strong>`;
             }
 
             const specsElem = document.getElementById('product-specs');
-            if (specsElem && product.specifications) {
+            if (specsElem && productSpecs) {
                 specsElem.innerHTML = '';
-                product.specifications.forEach(spec => {
+                productSpecs.forEach(spec => {
                     const li = document.createElement('li');
                     li.textContent = spec;
                     specsElem.appendChild(li);
@@ -164,7 +172,7 @@
             const mainImg = document.getElementById('product-detail');
             if (mainImg && product.images && product.images.length > 0) {
                 mainImg.src = product.images[0];
-                mainImg.alt = product.name;
+                mainImg.alt = productName;
             }
 
             // Miniaturas
@@ -182,14 +190,13 @@
                     const img = document.createElement('img');
                     img.className = 'card-img img-fluid thumb-img';
                     img.src = imgSrc;
-                    img.alt = `${product.name} - Vista ${idx + 1}`;
+                    img.alt = `${productName} - ${currentLang === 'es' ? 'Vista' : 'View'} ${idx + 1}`;
                     img.style.cursor = 'pointer';
                     a.appendChild(img);
                     col.appendChild(a);
                     miniaturasRow.appendChild(col);
                 });
 
-                // Event listeners para miniaturas
                 miniaturasRow.querySelectorAll('.thumb-link').forEach(function (link) {
                     link.addEventListener('click', function (e) {
                         e.preventDefault();
@@ -233,11 +240,15 @@
                     e.preventDefault();
                     const now = new Date();
                     const hour = now.getHours();
-                    let saludo = 'Buenas tardes';
-                    if (hour < 12) saludo = 'Buenos días';
-                    else if (hour >= 19) saludo = 'Buenas noches';
+                    let saludo = currentLang === 'es' ? 'Buenas tardes' : 'Good afternoon';
+                    if (hour < 12) saludo = currentLang === 'es' ? 'Buenos días' : 'Good morning';
+                    else if (hour >= 19) saludo = currentLang === 'es' ? 'Buenas noches' : 'Good evening';
 
-                    const mensaje = `${saludo}, estoy interesad@ en este producto:\n- ${product.name} (Cantidad: ${quantity})\nTotal: $${(product.price * quantity).toFixed(2)}`;
+                    const interestedText = currentLang === 'es' ? 'estoy interesad@ en este producto:' : 'I am interested in this product:';
+                    const quantityText = currentLang === 'es' ? 'Cantidad:' : 'Quantity:';
+                    const totalText = currentLang === 'es' ? 'Total:' : 'Total:';
+
+                    const mensaje = `${saludo}, ${interestedText}\n- ${productName} (${quantityText} ${quantity})\n${totalText} ${(product.price * quantity).toFixed(2)}`;
                     const numero = '19452179299';
                     const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
                     window.open(url, '_blank');
@@ -251,7 +262,7 @@
                     e.preventDefault();
                     const productWithImg = {
                         id: product.id,
-                        name: product.name,
+                        name: productName,
                         price: product.price,
                         img: product.images && product.images.length > 0 ? product.images[0] : '',
                     };
@@ -260,7 +271,10 @@
                             window.addToCart(productWithImg);
                         }
                     }
-                    alert(`${product.name} añadido al carrito (${quantity} unidad${quantity > 1 ? 'es' : ''})`);
+                    const addedText = currentLang === 'es'
+                        ? `${productName} añadido al carrito (${quantity} unidad${quantity > 1 ? 'es' : ''})`
+                        : `${productName} added to cart (${quantity} item${quantity > 1 ? 's' : ''})`;
+                    alert(addedText);
                 });
             }
         });
